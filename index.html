@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Welcome</title>
+    <link rel="shortcut icon" href="https://www.flaticon.com/svg/vstatic/svg/814/814513.svg?token=exp=1617261227~hmac=14eb73eb88ee06661d080718b7c1bef7">
+</head>
+<body>
+    <div class="showcase">
+        <header>
+            <div class="dropdown-menu">
+                <ul class="dropdown-content">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#citiesgrid">Cities</a></li>
+                    <li><a href="#">About me</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <video src="images/playback.mp4" muted autoplay loop></video>
+
+        <div class="overlay"></div>
+
+        <div class="text">
+            <h2>Earth</h2>
+            <h3>Explore the world</h3>
+            <p>The world is the Earth and all life on it, including human civilization. In a philosophical context, the "world" is the whole of the physical Universe, or an ontological world (the "world" of an individual). In a theological context, the world is the material or the profane sphere, as opposed to the celestial, spiritual, transcendent or sacred spheres.</p>
+            <p class="source">Wikipedia</p>
+        </div>
+        <ul class="social">
+            <p class="follow">Follow me on:</p>
+            <li><a href="https://www.linkedin.com/in/harrish-c-494256146/" target="_blank"><img src="https://www.shareicon.net/data/512x512/2016/07/13/606885_linkedin_2048x2048.png" width="60" height="60"></a></li>
+            <li><a href="https://twitter.com/harrishchidam" target="_blank"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+            <li><a href="https://github.com/HarrishC" target="_blank"><img src="https://image.flaticon.com/icons/png/512/25/25231.png" width="50" height="50"></a></li>
+        </ul>
+        <p class="scroll"><a href="#citiesgrid">Scroll down for more</a></p>
+    </div>
+    <div id="citiesgrid">
+      <h2 class="citytitle">Explore the cities</h2>
+      <h3 class="major">Major cities around the world</h3> 
+      <div class="container">
+        <section class="citygird">
+          <div class="content">
+              <div class="content-overlay"></div>
+              <img class="content-image" src="images/newyorkback.jpg" alt="New York">
+              <video class="content-video" src="images/newyorkplayback.mp4" muted autoplay loop></video>
+              <div class="content-title">
+                <h2 class="content-city">New york city</h2>
+                <span class="content-country">United States of America</span>
+              </div>
+          </div>
+          <div class="content">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="images/dubaiback.jpg" alt="Dubai">
+            <video class="content-video" src="images/dubaiplayback.mp4" muted autoplay loop></video>
+            <div class="content-title">
+              <h2 class="content-city">Dubai</h2>
+              <span class="content-country">United Arab Emirates</span>
+            </div>
+          </div>
+          <div class="content">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="images/tokyoback.jpg" alt="Tokyo">
+            <video class="content-video" src="images/tokyoplayback.mp4" muted autoplay loop></video>
+            <div class="content-title">
+              <h2 class="content-city">Tokyo</h2>
+              <span class="content-country">Japan</span>
+            </div>
+          </div>
+          <div class="content">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="images/mumbaiback.jpg" alt="Mumbai">
+            <video class="content-video" src="images/mumbaiplayback.mp4" muted autoplay loop></video>
+            <div class="content-title">
+              <h2 class="content-city">Mumbai</h2>
+              <span class="content-country">India</span>
+            </div>
+          </div>
+          <div class="content">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="images/parisback.jpg" alt="Paris">
+            <video class="content-video" src="images/parisplayback.mp4" muted autoplay loop></video>
+            <div class="content-title">
+              <h2 class="content-city">Paris</h2>
+              <span class="content-country">France</span>
+            </div>
+          </div>
+          <div class="content">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="images/hongkongback.jpg" alt="Hong Kong">
+            <video class="content-video" src="images/hongkongplayback.mp4" muted autoplay loop></video>
+            <div class="content-title">
+              <h2 class="content-city">Hong Kong</h2>
+              <span class="content-country">China</span>
+            </div>
+          </div>
+      </div>
+    </section>
+    <footer>
+      <p class="pexels">All Images and Videos downloaded from <a href="https://www.pexels.com" target="_blank">Pexels</a></p>
+      <p class="author">Created by <a href="https://github.com/HarrishC" target="_blank">C Harrish</a></p>
+    </footer>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    }
+  });
+});
+</script>
+</html>
